@@ -49,3 +49,9 @@ MQTT topic configuration can be fully customized in the library by changing stri
   temperature_command_topic: "etatherm/1/temperature/target/set"
 ```
 ## Home Assistat dashboard screenshots
+
+![ha](https://github.com/mbisak/etatherm-ha-bridge/assets/80639683/947742f5-5c06-4cae-99de-8e10c6e0580f)
+
+![mqtt](https://github.com/mbisak/etatherm-ha-bridge/assets/80639683/cfe87953-4aad-4c45-a498-75d2339d4851)
+
+![mqtt1](https://github.com/mbisak/etatherm-ha-bridge/assets/80639683/84392279-ef62-4844-856c-6f5de53f6446)
