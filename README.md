@@ -30,3 +30,19 @@ Repository content:
 The library transfers temperatures, heating modes and other parameters between MQTT Broker and ETH1x control unit. Since the CPU in the control unit is not powerful (I have no idea which CPU is currently used) the communication stucks from time to time, so packets are retransmitted after timeout. It may last quite long to retrieve or store data to the control unit and that is why I have implemented command queue that controls communication with the control unit. The library writes command and parameters to the queue and the queue manager executes them in serial order. The control unit is not overloaded and reads or writes to the control unit fully execute prior another read or write is executed.
 
 MQTT topic configuration can be fully customized in the library by changing string costants.
+
+## Home Assistant example configuration in the climate .yaml file
+- name: "Work room"
+  object_id: etatherm_workroom_heating
+  unique_id: etatherm_workroom_heating
+  current_temperature_topic: "etatherm/1/temperature/real"
+  temperature_unit: "C"
+  precision: 1.0
+  min_temp: 6
+  max_temp: 35
+  initial: 19
+  temp_step: 1
+  temperature_state_topic: "etatherm/1/temperature/target"
+  mode_state_topic: "etatherm/1/mode"
+  mode_command_topic: "etatherm/1/mode/set"
+  temperature_command_topic: "etatherm/1/temperature/target/set"
