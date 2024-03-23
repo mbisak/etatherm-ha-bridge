@@ -27,7 +27,7 @@ Repository content:
 2) does not allow to configure bus devices
 
 ## Functionality principles
-The library transfers temperatures, heating modes and other parameters between MQTT Broker and ETH1x control unit. Since the CPU in the control unit is not powerful (I have no idea which CPU is currently used) the communication stucks from time to time, so packets are retransmitted after timeout. It may last quite long to retrieve or store data to the control unit and that is why I have implemented command queue that controls communication with the control unit. The library writes command and parameters to the queue and the queue manager executes them in serial order. The control unit is not overloaded and reads or writes to the control unit fully execute prior another read or write is executed.
+The library transfers temperatures, heating modes and other parameters between MQTT Broker and ETH1x control unit. Since the CPU in the control unit is not powerful (I have no idea which CPU is currently used) the communication stucks from time to time, so packets need to be retransmitted after timeout. It may last quite long to retrieve or store data to the control unit and that is why I have implemented command queue that controls communication with the control unit. The library writes command and parameters to the queue and the queue manager executes them in serial order. The control unit is not overloaded and reads or writes to the control unit fully execute prior another read or write is executed.
 
 MQTT topic configuration can be fully customized in the library by changing string costants.
 
