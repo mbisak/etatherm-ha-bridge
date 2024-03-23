@@ -15,11 +15,12 @@ Repository content:
 ## Functionality:
 1) allows to read most of the control unit parameters
 2) allows to activate automatic, heating and off mode
-3) when heating mode is activated it actually activat *ROZ* (Rychlá operativní změna in Czech)
-4) when off is activated it sets target temperature to 6°C
+3) when heating mode is activated it actually activates *ROZ* (Rychlá operativní změna in Czech)
+4) when off mode is activated it sets target temperature to 6°C
 5) in heating mode, target temperature can be set between 6°C and 35°C; after time set in *ROZ* elapses, control unit automatically switches back to the automatic mode
 6) the off mode is set until set manually to the automatic or heat mode
-7) 
+7) allows to switch between different named heating maps. Heating maps must be preconfigured using Web GUI or Windows program
+8) allows to activate *HOZ* (Hromadná operativní změna in Czech)
 
 ## Limitations:
 1) does not support setting of system parameters, like passwords, programs, heating maps, ...
