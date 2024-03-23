@@ -23,7 +23,7 @@ Repository content:
 8) allows to activate and deactivate *HOZ* (Hromadná operativní změna in Czech); I use it in Home Assistant automations to set holiday temperature when leaving home and automatic mode before arrival
 
 ## Limitations
-1) does not support setting of system parameters, like passwords, programs, heating maps, ...
+1) does not support setting of system parameters like passwords, programs, heating maps, ...
 2) does not allow to configure bus devices
 
 ## Functionality principles
