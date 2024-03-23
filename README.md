@@ -11,3 +11,16 @@ Repository content:
 **etatherm.py** is library
 
 **mqtt.py** is sample program that controls Etatherm system using MQTT messages
+
+## Functionality:
+1) allows to read most of the control unit parameters
+2) allows to activate automatic, heating and off mode
+3) when heating mode is activated it actually activat *ROZ* (Rychlá operativní změna in Czech)
+4) when off is activated it sets target temperature to 6°C
+5) in heating mode, target temperature can be set between 6°C and 35°C; after time set in *ROZ* elapses, control unit automatically switches back to the automatic mode
+6) the off mode is set until set manually to the automatic or heat mode
+7) 
+
+## Limitations:
+1) does not support setting of system parameters, like passwords, programs, heating maps, ...
+2) does not allow to configure bus devices
