@@ -33,16 +33,29 @@ MQTT topic configuration can be fully customized in the library by changing stri
 
 ## Home Assistant example configuration in the climate .yaml file
 - name: "Work room"
+  
   object_id: etatherm_workroom_heating
+
   unique_id: etatherm_workroom_heating
+
   current_temperature_topic: "etatherm/1/temperature/real"
+
   temperature_unit: "C"
+
   precision: 1.0
+
   min_temp: 6
+
   max_temp: 35
+
   initial: 19
+
   temp_step: 1
+
   temperature_state_topic: "etatherm/1/temperature/target"
+
   mode_state_topic: "etatherm/1/mode"
+
   mode_command_topic: "etatherm/1/mode/set"
+
   temperature_command_topic: "etatherm/1/temperature/target/set"
