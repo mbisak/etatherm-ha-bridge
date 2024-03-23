@@ -12,7 +12,7 @@ Repository content:
 
 **mqtt.py** is sample program that controls Etatherm system using MQTT messages
 
-## Functionality:
+## Functionality
 1) allows to read most of the control unit parameters
 2) allows to activate automatic, heating and off mode
 3) when heating mode is activated it actually activates *ROZ* (Rychlá operativní změna in Czech)
@@ -22,8 +22,9 @@ Repository content:
 7) allows to switch between different named heating maps. Heating maps must be preconfigured using Web GUI or Windows program
 8) allows to activate and deactivate *HOZ* (Hromadná operativní změna in Czech); I use it in Home Assistant automations to set holiday temperature when leaving home and automatic before arrival
 
-## Limitations:
+## Limitations
 1) does not support setting of system parameters, like passwords, programs, heating maps, ...
 2) does not allow to configure bus devices
 
 ## Functionality principles
+The library transfers temperatures, heating modes and other parameters between MQQT Broker and ETH1x control unit. Since the CPU in the control unit is not powerful (I have no idea which CPU is currently used) the communication stucks from time to time, so packets are retransmitted after timeout. It may last quite long to retrieve or store data to the control unit and that is why I have implemented command queue that controls communication with control unit. The library writes command and parameters to the queue and queue manager executes them in serial. Control unit is not overloaded and the reads or writes to the control unit fully execute prior another read or write is executed.
