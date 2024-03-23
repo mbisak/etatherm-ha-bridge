@@ -48,3 +48,4 @@ MQTT topic configuration can be fully customized in the library by changing stri
   mode_command_topic: "etatherm/1/mode/set"
   temperature_command_topic: "etatherm/1/temperature/target/set"
 ```
+## Home Assistat dashboard screenshots
