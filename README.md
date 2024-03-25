@@ -1,6 +1,8 @@
 # MQTT bridge to Etatherm IRC heating system
 Etatherm is great Czech IRC heating control system, see https://www.etatherm.cz/.
 
+This is initial version of the library. As it works fine and is stable there was so far no push to redesign or make it more efficient:-)
+
 It runs in my home since 2005 without issues. The first version of the control unit did not have Web GUI, but it had changed with introduction of the ETH1e and ETH1i control units. Unfortunately it cannot be integrated with other systems because communication protocol is proprietary. I was lucky asking the manufacturer for the protocol documentation. I don't have a permission to share it but I was able to code this library so that Etatherm can be controlled from other systems, e.g. Home Assistant.
 
 Communication protocol is intelectual property of the ETATHERM s.r.o. The library is published with permission of the manufacturer.
@@ -31,7 +33,7 @@ Repository content:
 ## Functionality principles
 The library transfers temperatures, heating modes and other parameters between MQTT Broker and ETH1x control unit. Since the CPU in the control unit is not powerful (I have no idea which CPU is currently used) the communication stucks from time to time, so packets need to be retransmitted after timeout. It may last quite long to retrieve or store data to the control unit and that is why I have implemented command queue that controls communication with the control unit. The library writes command and parameters to the queue and the queue manager executes them in serial order. The control unit is not overloaded and reads or writes to the control unit fully execute prior another read or write is executed.
 
-MQTT topic configuration can be fully customized in the library by changing string costants.
+MQTT topic configuration can be fully customized in the library by changing string costants as for now. In the future it may be changed in the config file.
 
 ## Home Assistant example configuration in the climate .yaml file
 ```
