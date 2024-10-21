@@ -7,13 +7,13 @@ ETATHERMPORT = {port}
 MQTTBROKERHOST = '{MQTT Broker IP/hostname}'
 MQTTBROKERPORT = {MQTT Broker port}
 ETATHERMMQTTPREFIX = 'etatherm/'
-USERNAME = ""
-PASSWORD = ""
+MQTTUSERNAME = ""
+MQTTPASSWORD = ""
 
 print("Starting program")
 etherm = etatherm.etatherm.etatherm(ETATHERMHOST, ETATHERMPORT)
 if not(etherm.initAddressParameters()):
-    etherm.initMqtt(MQTTBROKERHOST,MQTTBROKERPORT,USERNAME,PASSWORD)
+    etherm.initMqtt(MQTTBROKERHOST,MQTTBROKERPORT,MQTTUSERNAME,MQTTPASSWORD)
     etherm.mqttSessionOpen()
     etherm.mqttSubscribeTopics()
     etherm.mqttRegisterCallback()
