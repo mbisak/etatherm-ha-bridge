@@ -508,7 +508,7 @@ class etatherm:
                 addressNames = {}
                 return addressNames
             else:
-                addressNames.update({deviceBusId: respFrame[5:13].decode().rstrip('\x00')})
+                addressNames.update({deviceBusId: respFrame[5:13].decode('cp1250').rstrip('\x00')})
         return addressNames
 
     # retrieves Global Operational Change parameters of all devices on the BUS
