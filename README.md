@@ -52,6 +52,9 @@ MQTT topic configuration can be fully customized in the library by changing stri
   mode_command_topic: "etatherm/1/mode/set"
   temperature_command_topic: "etatherm/1/temperature/target/set"
 ```
+## Added features and changes
+1) support for CP1250 encoded room names
+
 ## Home Assistat dashboard screenshots
 
 ![ha](https://github.com/mbisak/etatherm-ha-bridge/assets/80639683/947742f5-5c06-4cae-99de-8e10c6e0580f)
